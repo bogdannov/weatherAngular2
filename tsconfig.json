@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "removeComments": false,
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": ".",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "paths": {
+          "@angular/*": ["node_modules/@angular/*"]
+        },
+        "types": [
+            "core-js",
+            "node",
+            "jasmine"
+        ]
+    },
+    "awesomeTypeScriptLoaderOptions": {
+        "useWebpackText": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
