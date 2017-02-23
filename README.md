@@ -1,4 +1,5 @@
 # wetherAngular2
 
-# npm install 
-# npm start 
+for start project
+npm install 
+npm start 

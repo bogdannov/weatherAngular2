@@ -1,6 +1,7 @@
 {
-  "name": "angular-2-start",
+  "name": "angular-2-weather",
   "version": "0.1.0",
+  "author": "Bohdan Novoiavchykov",
   "dependencies": {
     "@angular/common": "~2.2.0",
     "@angular/compiler": "~2.2.0",
