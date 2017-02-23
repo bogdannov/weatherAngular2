@@ -2,7 +2,6 @@
  const webpack = require('webpack');
  const path = require('path');
  console.info(`now is ${NODE_ENV} module`);
-console.log(__dirname + '/public/js');
  module.exports = {
      entry :{
         angular: './app/main.ts',
@@ -25,14 +24,9 @@ console.log(__dirname + '/public/js');
               test: /\.ts$/,
               loaders: [
                     'awesome-typescript-loader',
-                    // 'angular2-router-loader',
                     'angular2-template-loader'
                 ]
             },
-            // { 
-            //     test: require.resolve('jquery'), 
-            //     loader: 'expose?jQuery!expose?$' 
-            // },
             {
                 test: /\.js$/,
                 loader: 'babel',
@@ -64,3 +58,19 @@ console.log(__dirname + '/public/js');
           }),
      ],
  };
+
+
+ /**
+ * For prod mode uglify js 
+ */
+ if(NODE_ENV == 'prod'){
+      module.exports.plugins.push(
+         new webpack.optimize.UglifyJsPlugin({
+             warning: false,
+             sourceMap: false,
+             output: {
+                 comments: false
+             }
+         })
+     );
+ }

@@ -39,5 +39,8 @@
     "typescript": "^2.1.4",
     "typings": "^1.2.0",
     "webpack": "^1.12.14"
+  },
+  "scripts": {    
+    "start": "lite-server"
   }
 }
